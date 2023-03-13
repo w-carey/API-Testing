@@ -1,4 +1,4 @@
-KEY = "KEY_HERE"
+KEY = "key_here"
 CITY = "Portsmouth"
 CALL = f"https://api.openweathermap.org/data/2.5/weather?q={CITY},uk&appid={KEY}"
 
@@ -10,4 +10,5 @@ WEATHER = REQUEST.json()
 #print(WEATHER)
 
 for index in WEATHER:
-  print(index, ":", WEATHER[index])
+  SPACES = " " * (10-len(index))
+  print(f"{index} {SPACES}: {WEATHER[index]}")
